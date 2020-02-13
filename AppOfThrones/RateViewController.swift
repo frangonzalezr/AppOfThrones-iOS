@@ -26,6 +26,10 @@ class RateViewController: UIViewController {
         self.rateLabel.text = "\(valueInt)"
     }
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func accept(_ sender: Any) {
         rateLabel.text = "Accept"
         UIView.animate(withDuration: 0.25){

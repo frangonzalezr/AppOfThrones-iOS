@@ -50,21 +50,17 @@
                         <action selector="accept:" destination="-1" eventType="touchUpInside" id="FRm-fp-pqf"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN4-Vz-Csd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN4-Vz-Csd">
                     <rect key="frame" x="20" y="44" width="78" height="55"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="ILF-nG-qAs"/>
                         <constraint firstAttribute="width" constant="78" id="YiU-RA-csa"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5U-vC-sIu">
-                    <rect key="frame" x="316" y="44" width="78" height="55"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="55" id="HJQ-kQ-2tZ"/>
-                        <constraint firstAttribute="width" constant="78" id="XhU-6d-pA1"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
+                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="mc1-q2-6wJ"/>
+                    </connections>
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nep-In-Rde">
                     <rect key="frame" x="33" y="484" width="349" height="31"/>
@@ -79,7 +75,6 @@
                 <constraint firstItem="06H-3t-8Bo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="74X-jS-HIP"/>
                 <constraint firstItem="4RV-Ec-Jlg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="49" id="9qr-Za-K2c"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c5m-la-Sla" secondAttribute="trailing" constant="20" id="FVv-Ld-5HC"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r5U-vC-sIu" secondAttribute="trailing" constant="20" id="Gw2-7P-DRq"/>
                 <constraint firstItem="06H-3t-8Bo" firstAttribute="top" secondItem="aN4-Vz-Csd" secondAttribute="bottom" constant="43" id="HW7-fC-Nbc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nep-In-Rde" secondAttribute="trailing" constant="34" id="LXg-FZ-61b"/>
                 <constraint firstItem="c5m-la-Sla" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="X3w-2S-dNh"/>
@@ -90,7 +85,6 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="c5m-la-Sla" secondAttribute="bottom" constant="32" id="mmV-pH-5OZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="06H-3t-8Bo" secondAttribute="trailing" constant="20" id="pA1-So-feX"/>
                 <constraint firstItem="Nep-In-Rde" firstAttribute="top" secondItem="4RV-Ec-Jlg" secondAttribute="bottom" constant="36" id="rE6-lO-Xc0"/>
-                <constraint firstItem="r5U-vC-sIu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uCB-RF-3mU"/>
                 <constraint firstItem="Nep-In-Rde" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="35" id="yPy-Ob-Ktu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -99,5 +93,6 @@
     </objects>
     <resources>
         <image name="episodeTest" width="950" height="1425"/>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

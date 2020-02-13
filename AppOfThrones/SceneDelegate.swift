@@ -32,11 +32,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         houseViewController.tabBarItem = UITabBarItem.init(title: "Houses", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
         settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 3)
     
+        let navigationEpisodeViewController = UINavigationController.init(rootViewController: episodeViewController)
+        
+        let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
+        
+        let navigationHouseViewController = UINavigationController.init(rootViewController: houseViewController)
+        
+        let navigationSettingsViewController = UINavigationController.init(rootViewController: settingsViewController)
+        
+        
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [episodeViewController, castViewController, houseViewController, settingsViewController]
+        tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseViewController, navigationSettingsViewController]
         tabBarController.tabBar.barStyle = .black
         tabBarController.tabBar.isTranslucent = true
         tabBarController.tabBar.tintColor = UIColor.init(red: 235/255.0, green: 172/255.0, blue: 38/255.0, alpha: 1.0)
+        UINavigationBar.appearance().overrideUserInterfaceStyle = .dark
+        UINavigationBar.appearance().tintColor = UIColor.init(red: 235/255.0, green: 172/255.0, blue: 38/255.0, alpha: 1.0)
+        
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
