@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1437ED523F6023500E8784B /* CastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1437ED423F6023500E8784B /* CastViewController.xib */; };
+		A1437ED723F6024900E8784B /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1437ED623F6024900E8784B /* CastViewController.swift */; };
+		A1437ED923F602BC00E8784B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1437ED823F602BC00E8784B /* SettingsViewController.swift */; };
+		A1437EDB23F602D200E8784B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1437EDA23F602D200E8784B /* SettingsViewController.xib */; };
+		A1437EDF23F605AB00E8784B /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1437EDD23F605AB00E8784B /* HouseViewController.swift */; };
+		A1437EE023F605AB00E8784B /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1437EDE23F605AB00E8784B /* HouseViewController.xib */; };
+		A177979323F5F0560043D3DF /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177979223F5F0560043D3DF /* EpisodeViewController.swift */; };
+		A177979523F5F0820043D3DF /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A177979423F5F0820043D3DF /* EpisodeViewController.xib */; };
+		A177979923F5F41A0043D3DF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177979823F5F41A0043D3DF /* Episode.swift */; };
 		A1C1CCF523F34BDF002BE504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */; };
 		A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */; };
-		A1C1CCF923F34BDF002BE504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CCF823F34BDF002BE504 /* ViewController.swift */; };
-		A1C1CCFC23F34BDF002BE504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CCFA23F34BDF002BE504 /* Main.storyboard */; };
 		A1C1CCFE23F34BE3002BE504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CCFD23F34BE3002BE504 /* Assets.xcassets */; };
 		A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */; };
 		A1C1CD0C23F34BE3002BE504 /* AppOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD0B23F34BE3002BE504 /* AppOfThronesTests.swift */; };
+		A1C1CD1723F35E45002BE504 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD1623F35E45002BE504 /* RateViewController.swift */; };
+		A1C1CD1923F35E92002BE504 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CD1823F35E92002BE504 /* RateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +36,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1437ED423F6023500E8784B /* CastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastViewController.xib; sourceTree = "<group>"; };
+		A1437ED623F6024900E8784B /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
+		A1437ED823F602BC00E8784B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A1437EDA23F602D200E8784B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		A1437EDD23F605AB00E8784B /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
+		A1437EDE23F605AB00E8784B /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		A177979223F5F0560043D3DF /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		A177979423F5F0820043D3DF /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
+		A177979823F5F41A0043D3DF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		A1C1CCF123F34BDF002BE504 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1C1CCF823F34BDF002BE504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A1C1CCFB23F34BDF002BE504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1C1CCFD23F34BE3002BE504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C1CD0023F34BE3002BE504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1C1CD0223F34BE3002BE504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1CD0723F34BE3002BE504 /* AppOfThronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppOfThronesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1CD0B23F34BE3002BE504 /* AppOfThronesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOfThronesTests.swift; sourceTree = "<group>"; };
 		A1C1CD0D23F34BE3002BE504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C1CD1623F35E45002BE504 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		A1C1CD1823F35E92002BE504 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1437ED223F601F400E8784B /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				A1437ED423F6023500E8784B /* CastViewController.xib */,
+				A1437ED623F6024900E8784B /* CastViewController.swift */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
+		A1437ED323F601FF00E8784B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A1437ED823F602BC00E8784B /* SettingsViewController.swift */,
+				A1437EDA23F602D200E8784B /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A1437EDC23F6058600E8784B /* Houses */ = {
+			isa = PBXGroup;
+			children = (
+				A1437EDD23F605AB00E8784B /* HouseViewController.swift */,
+				A1437EDE23F605AB00E8784B /* HouseViewController.xib */,
+			);
+			path = Houses;
+			sourceTree = "<group>";
+		};
+		A177979623F5F0920043D3DF /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				A177979423F5F0820043D3DF /* EpisodeViewController.xib */,
+				A177979223F5F0560043D3DF /* EpisodeViewController.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		A177979723F5F3F00043D3DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A177979823F5F41A0043D3DF /* Episode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A1C1CCE823F34BDF002BE504 = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +141,15 @@
 		A1C1CCF323F34BDF002BE504 /* AppOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A1437EDC23F6058600E8784B /* Houses */,
+				A1437ED323F601FF00E8784B /* Settings */,
+				A1437ED223F601F400E8784B /* Cast */,
+				A177979723F5F3F00043D3DF /* Model */,
+				A1C1CD1623F35E45002BE504 /* RateViewController.swift */,
+				A1C1CD1823F35E92002BE504 /* RateViewController.xib */,
+				A177979623F5F0920043D3DF /* Episodes */,
 				A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */,
 				A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */,
-				A1C1CCF823F34BDF002BE504 /* ViewController.swift */,
-				A1C1CCFA23F34BDF002BE504 /* Main.storyboard */,
 				A1C1CCFD23F34BE3002BE504 /* Assets.xcassets */,
 				A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */,
 				A1C1CD0223F34BE3002BE504 /* Info.plist */,
@@ -180,9 +247,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C1CD1923F35E92002BE504 /* RateViewController.xib in Resources */,
+				A1437EDB23F602D200E8784B /* SettingsViewController.xib in Resources */,
 				A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */,
+				A1437ED523F6023500E8784B /* CastViewController.xib in Resources */,
+				A1437EE023F605AB00E8784B /* HouseViewController.xib in Resources */,
+				A177979523F5F0820043D3DF /* EpisodeViewController.xib in Resources */,
 				A1C1CCFE23F34BE3002BE504 /* Assets.xcassets in Resources */,
-				A1C1CCFC23F34BDF002BE504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C1CCF923F34BDF002BE504 /* ViewController.swift in Sources */,
+				A1C1CD1723F35E45002BE504 /* RateViewController.swift in Sources */,
 				A1C1CCF523F34BDF002BE504 /* AppDelegate.swift in Sources */,
+				A1437ED923F602BC00E8784B /* SettingsViewController.swift in Sources */,
+				A177979323F5F0560043D3DF /* EpisodeViewController.swift in Sources */,
+				A177979923F5F41A0043D3DF /* Episode.swift in Sources */,
 				A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */,
+				A1437ED723F6024900E8784B /* CastViewController.swift in Sources */,
+				A1437EDF23F605AB00E8784B /* HouseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1C1CCFA23F34BDF002BE504 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1C1CCFB23F34BDF002BE504 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
