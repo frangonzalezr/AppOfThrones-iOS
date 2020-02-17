@@ -23,6 +23,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         self.setupUI()
         
+        
         let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
         self.tableView.delegate = self
@@ -69,6 +70,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
+            let episode = episodes[indexPath.row]
+            
             return cell
         }
         fatalError("Could not create Account cells")

@@ -23,6 +23,12 @@ class EpisodeTableViewCell: UITableViewCell {
         rateButton.layer.cornerRadius = 15
     }
 
+    func setEpisode(_ episode:Episode){
+        thumb.image = episode.image == nil ? nil : UIImage.init(named: episode.image!)
+        title.text  = episode.name
+        date.text   = episode.date
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
