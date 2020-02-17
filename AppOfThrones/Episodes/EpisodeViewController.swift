@@ -9,8 +9,9 @@
 import UIKit
 
 class EpisodeViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter is coming", date: "13/2/2020", image: "", episode: 1, season: 1, overview: "Winter is coming")]
+    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter is coming", date: "13/2/2020", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn Winter is coming")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,18 +20,9 @@ class EpisodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        
+        let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
     }
     
     func setupUI() {
