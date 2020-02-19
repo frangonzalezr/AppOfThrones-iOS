@@ -16,6 +16,7 @@
 		A177979323F5F0560043D3DF /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177979223F5F0560043D3DF /* EpisodeViewController.swift */; };
 		A177979523F5F0820043D3DF /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A177979423F5F0820043D3DF /* EpisodeViewController.xib */; };
 		A177979923F5F41A0043D3DF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177979823F5F41A0043D3DF /* Episode.swift */; };
+		A1B6A31F23FC827B00B48091 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A31E23FC827B00B48091 /* Rating.swift */; };
 		A1C0553623FB31C900458C75 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0553423FB31C900458C75 /* EpisodeTableViewCell.swift */; };
 		A1C0553723FB31C900458C75 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C0553523FB31C900458C75 /* EpisodeTableViewCell.xib */; };
 		A1C0553A23FB496B00458C75 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0553823FB496B00458C75 /* CastTableViewCell.swift */; };
@@ -30,6 +31,8 @@
 		A1C1CD0C23F34BE3002BE504 /* AppOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD0B23F34BE3002BE504 /* AppOfThronesTests.swift */; };
 		A1C1CD1723F35E45002BE504 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD1623F35E45002BE504 /* RateViewController.swift */; };
 		A1C1CD1923F35E92002BE504 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CD1823F35E92002BE504 /* RateViewController.xib */; };
+		A1F246F323FBEBBA00F6B3AE /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F246F123FBEBB900F6B3AE /* HouseTableViewCell.xib */; };
+		A1F246F423FBEBBA00F6B3AE /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F246F223FBEBB900F6B3AE /* HouseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		A177979223F5F0560043D3DF /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		A177979423F5F0820043D3DF /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
 		A177979823F5F41A0043D3DF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		A1B6A31E23FC827B00B48091 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		A1C0553423FB31C900458C75 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		A1C0553523FB31C900458C75 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		A1C0553823FB496B00458C75 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		A1C1CD0D23F34BE3002BE504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1CD1623F35E45002BE504 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		A1C1CD1823F35E92002BE504 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		A1F246F123FBEBB900F6B3AE /* HouseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
+		A1F246F223FBEBB900F6B3AE /* HouseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +121,8 @@
 			children = (
 				A1437EDD23F605AB00E8784B /* HouseViewController.swift */,
 				A1437EDE23F605AB00E8784B /* HouseViewController.xib */,
-				A1C0554023FB515600458C75 /* DataController.swift */,
+				A1F246F223FBEBB900F6B3AE /* HouseTableViewCell.swift */,
+				A1F246F123FBEBB900F6B3AE /* HouseTableViewCell.xib */,
 			);
 			path = Houses;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 				A1C0553E23FB4B8000458C75 /* Cast.swift */,
 				A177979823F5F41A0043D3DF /* Episode.swift */,
 				A1C0554223FB550A00458C75 /* House.swift */,
+				A1B6A31E23FC827B00B48091 /* Rating.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 		A1C1CCF323F34BDF002BE504 /* AppOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A1C0554023FB515600458C75 /* DataController.swift */,
 				A1437EDC23F6058600E8784B /* Houses */,
 				A1437ED323F601FF00E8784B /* Settings */,
 				A1437ED223F601F400E8784B /* Cast */,
@@ -274,6 +283,7 @@
 				A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */,
 				A1437ED523F6023500E8784B /* CastViewController.xib in Resources */,
 				A1437EE023F605AB00E8784B /* HouseViewController.xib in Resources */,
+				A1F246F323FBEBBA00F6B3AE /* HouseTableViewCell.xib in Resources */,
 				A1C0553723FB31C900458C75 /* EpisodeTableViewCell.xib in Resources */,
 				A1C0554523FB557800458C75 /* Assets.xcassets in Resources */,
 				A177979523F5F0820043D3DF /* EpisodeViewController.xib in Resources */,
@@ -306,6 +316,8 @@
 				A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */,
 				A1C0553F23FB4B8100458C75 /* Cast.swift in Sources */,
 				A1437ED723F6024900E8784B /* CastViewController.swift in Sources */,
+				A1B6A31F23FC827B00B48091 /* Rating.swift in Sources */,
+				A1F246F423FBEBBA00F6B3AE /* HouseTableViewCell.swift in Sources */,
 				A1437EDF23F605AB00E8784B /* HouseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

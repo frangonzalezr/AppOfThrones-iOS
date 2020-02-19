@@ -12,7 +12,7 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var cast: [Cast] = [Cast.init(id: 1, avatar: "Emilia Clarke", fullname: "Daenerys Targaryen", role: "", episodes: 1, birth: "", placeBirth: ""), Cast.init(id: 2, avatar: "Fran González", fullname: "", role: "", episodes: 1, birth: "", placeBirth: "")]
+    var cast: [Cast] = [Cast.init(id: 1, avatar: "Emilia Clarke", fullname: "Emilia Clarke", role: "Daenerys Targaryen", episodes: 73, birth: "1986-10-23", placeBirth: "London, England, UK"), Cast.init(id: 2, avatar: "Kit Harington", fullname: "Kit Harington", role: "Jon Snow", episodes: 73, birth: "1986-12-26", placeBirth: "Worcester, Worcestershire, England, UK")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

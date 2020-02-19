@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate {
 
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     var episodes: [Episode] = [Episode.init(id: 1, name: "Winter is coming", date: "13/2/2020", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn is coming")]
@@ -50,7 +50,14 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 123
     }
 
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let rateViewController = RateViewController()
+        self.present(rateViewController, animated: true, completion: nil)
         print("Estamos seleccionando la tabla en la celda \(indexPath.row) de la sección \(indexPath.section)")
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -70,15 +77,24 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
-            let episode = episodes[indexPath.row]
             
+            let ep = episodes[indexPath.row]
+            cell.setEpisode(ep)
+            cell.rateBlock = { () -> Void in
+                let rateViewController = RateViewController.init(withEpisode: ep)
+                let navigationController = UINavigationController.init(rootViewController: rateViewController)
+                self.present(navigationController, animated: true, completion: nil)
+            }
             return cell
         }
         fatalError("Could not create Account cells")
     }
     
-    // MARK: - EpisodeTableViewCellDelegate
+    // MARK: - RateViewControllerDelegate
     
+    func didRateChanged() {
+        self.tableView.reloadData()
+    }
 
     
 }
