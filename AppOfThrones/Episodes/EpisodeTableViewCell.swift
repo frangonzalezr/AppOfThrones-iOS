@@ -26,6 +26,7 @@ class EpisodeTableViewCell: UITableViewCell {
     
     
     var rateBlock: (() -> Void)?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

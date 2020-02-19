@@ -82,6 +82,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.setEpisode(ep)
             cell.rateBlock = { () -> Void in
                 let rateViewController = RateViewController.init(withEpisode: ep)
+                rateViewController.delegate = self
                 let navigationController = UINavigationController.init(rootViewController: rateViewController)
                 self.present(navigationController, animated: true, completion: nil)
             }

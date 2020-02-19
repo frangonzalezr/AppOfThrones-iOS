@@ -2,8 +2,8 @@
 //  House.swift
 //  AppOfThrones
 //
-//  Created by Fernando Torcelly Garcia on 09/02/2020.
-//  Copyright © 2020 Fernando Torcelly Garcia. All rights reserved.
+//  Created by Fran González on 14/02/2020.
+//  Copyright © 2020 Fran González. All rights reserved.
 //
 
 import Foundation

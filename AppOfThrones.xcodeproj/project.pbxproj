@@ -171,13 +171,13 @@
 			isa = PBXGroup;
 			children = (
 				A1C0554023FB515600458C75 /* DataController.swift */,
+				A177979623F5F0920043D3DF /* Episodes */,
+				A1437ED223F601F400E8784B /* Cast */,
 				A1437EDC23F6058600E8784B /* Houses */,
 				A1437ED323F601FF00E8784B /* Settings */,
-				A1437ED223F601F400E8784B /* Cast */,
 				A177979723F5F3F00043D3DF /* Model */,
 				A1C1CD1623F35E45002BE504 /* RateViewController.swift */,
 				A1C1CD1823F35E92002BE504 /* RateViewController.xib */,
-				A177979623F5F0920043D3DF /* Episodes */,
 				A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */,
 				A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */,
 				A1C0554423FB557800458C75 /* Assets.xcassets */,
