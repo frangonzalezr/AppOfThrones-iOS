@@ -13,7 +13,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
-    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter is coming", date: "13/2/2020", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn is coming")]
+    @IBAction func seasonChanged(_ sender: UISegmentedControl) {
+        let seasonNumber = sender.selectedSegmentIndex + 1
+        self.setupData(seasonNumber: seasonNumber)
+    
+    }
+    var episodes: [Episode] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,17 +27,41 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        
+        self.setupNotifications()
+        self.setupData(seasonNumber: 1)
+    
+    }
+   
+    // MARK: - Setup
+    
+    
+    func setupUI() {
+        self.title = "Seasons"
         
         let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    
     }
     
-    func setupUI() {
-        self.title = "Seasons"
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRateChanged), name: noteName, object: nil)
+    }
+    
+    func setupData(seasonNumber: Int) {
+        if let pathURL = Bundle.main.url(forResource: "season_\(seasonNumber)", withExtension: "json") {
+        do {
+        let data = try Data.init(contentsOf: pathURL)
+        let decoder = JSONDecoder()
+        episodes = try decoder.decode([Episode].self, from: data)
+            self.tableView.reloadData()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        } else {
+            fatalError("Could not build the parh url")
+        }
     }
     
     @IBAction func openRate(_ sender: Any) {
@@ -93,7 +122,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - RateViewControllerDelegate
     
-    func didRateChanged() {
+    @objc func didRateChanged() {
         self.tableView.reloadData()
     }
 

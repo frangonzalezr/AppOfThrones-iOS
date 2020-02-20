@@ -16,7 +16,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-4D-sM8">
+                    <rect key="frame" x="150" y="433" width="114" height="30"/>
+                    <state key="normal" title="Limpiar favoritos"/>
+                    <connections>
+                        <action selector="cleanFavoritesAction:" destination="-1" eventType="touchUpInside" id="sd8-WJ-5oJ"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oiz-Wp-B82"/>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="saK-bs-p8b"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="149"/>
         </view>

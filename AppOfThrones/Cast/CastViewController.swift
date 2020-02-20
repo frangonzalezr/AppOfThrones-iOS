@@ -8,7 +8,10 @@
 
 import UIKit
 
-class CastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CastViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CastTableViewCellDelegate {
+    
+
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,11 +24,14 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        
-        let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.setupNotifications()
+        self.setupData()
+    }
+    
+    
+    deinit {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.removeObserver(self, name: noteName, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,9 +46,35 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
     }
     
+    // MARK: - Setup functions
+    
+    
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+    }
+    
     func setupUI() {
         self.title = "Cast"
-        
+        let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    func setupData() {
+        if let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json") {
+        do {
+        let data = try Data.init(contentsOf: pathURL)
+        let decoder = JSONDecoder()
+        cast = try decoder.decode([Cast].self, from: data)
+            self.tableView.reloadData()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+        } else {
+            fatalError("Could not build the parh url")
+        }
     }
     
     // MARK: - UITableViewDelegate
@@ -70,8 +102,16 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CastTableViewCell", for: indexPath) as? CastTableViewCell {
             cell.setCast(cast[indexPath.row])
+            cell.delegate = self
             return cell
         }
         fatalError("Could not create Account cells")
+    }
+    
+    // MARK: - Favorites
+    
+    @objc func didFavoriteChanged() {
+        self.tableView.reloadData()
+        
     }
 }

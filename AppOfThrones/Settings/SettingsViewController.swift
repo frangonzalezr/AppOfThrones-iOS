@@ -9,6 +9,17 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+
+    
+    @IBAction func cleanFavoritesAction(_ sender: Any) {
+        DataController.shared.cleanFavorite()
+        
+        // ACTUALIZAR TODAS LAS TABLAS DONDE APAREZCA FAVORITOS
+        
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.post(name: noteName, object: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

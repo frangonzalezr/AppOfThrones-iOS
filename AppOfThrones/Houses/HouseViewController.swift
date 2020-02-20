@@ -12,6 +12,8 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
+    var houses: [House] = []
+    
     var house: [House] = [House.init(imageName: "Targaryen", name: "Targaryen", words: "Fire and Blood", seat: "Red Keep, King's Landing"), House.init(imageName: "Stark", name: "Stark", words: "Winter Is Coming", seat: "Winterfell")]
     
     
@@ -56,7 +58,19 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let house_selected = houses[indexPath.row]
+        
+        if let splitViewController = self.splitViewController,
+            splitViewController.viewControllers.count > 1 {
+            if let navigationController = splitViewController.viewControllers[1] as? UINavigationController,
+                let detailViewController = navigationController.visibleViewController as? HouseDetailViewController {
+                detailViewController.house = house_selected
+            }
+        } else {
+            let houseDetailVC = HouseDetailViewController.init(house: house_selected)
+            self.navigationController?.pushViewController(houseDetailVC, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     // MARK: - UITableViewDatasource

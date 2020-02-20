@@ -9,20 +9,20 @@
 import UIKit
 
 protocol CastTableViewCellDelegate: class {
-    
+    func didFavoriteChanged()
 }
 
 class CastTableViewCell: UITableViewCell {
 
-    
-    private weak var cast: Cast?
-    weak var delegate: CastTableViewCellDelegate?
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var role: UILabel!
     @IBOutlet weak var episodes: UILabel!
     @IBOutlet weak var heart: UIImageView!
+    
+    private var cast: Cast?
+    var delegate: CastTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +33,12 @@ class CastTableViewCell: UITableViewCell {
 
     
     func setCast(_ cast: Cast) {
+        
+        self.cast = cast
+                
+        let heartImageNamed = DataController.shared.isFavorite(cast) ? "heart.fill" : "heart"
+        heart.image = UIImage.init(systemName: heartImageNamed)
+        
         avatar.image = cast.avatar == nil ? nil : UIImage.init(named: cast.avatar!)
         name.text   = cast.fullname
         role.text   = cast.role
@@ -44,6 +50,17 @@ class CastTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func favoriteAction() {
+        if let cast = cast {
+            if DataController.shared.isFavorite(cast) == false {
+                DataController.shared.addFavorite(cast)
+            } else {
+                DataController.shared.removeFavorite(cast)
+            }
+            delegate?.didFavoriteChanged()
+        }
     }
     
 }
