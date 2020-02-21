@@ -60,7 +60,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             fatalError(error.localizedDescription)
         }
         } else {
-            fatalError("Could not build the parh url")
+            fatalError("Could not build the path url")
         }
     }
     

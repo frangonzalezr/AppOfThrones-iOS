@@ -19,30 +19,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let episodeViewController = EpisodeViewController()
-        let castViewController = CastViewController()
-        let houseViewController = HouseViewController()
-        let settingsViewController = SettingsViewController()
+        let episodeVC  = EpisodeViewController.init(nibName:  "EpisodeViewController", bundle: nil)
+        let episodeDetailVC = EpisodeDetailViewController.init(nibName: "EpisodeDetailViewController", bundle: nil)
+        let castVC     = CastViewController.init(nibName: "CastViewController", bundle: nil)
+        let houseVC    = HouseViewController.init(nibName: "HouseViewController", bundle: nil)
+        let houseDetailVC = HouseDetailViewController.init(nibName: "HouseDetailViewController", bundle: nil)
+        let settingsVC = SettingsViewController.init(nibName: "SettingsViewController", bundle: nil)
+
+        // Setup tabbar
+        let episodeSplitViewController  = CustomSplitViewController()
+        let castSplitViewController     = CustomSplitViewController()
+        let houseSplitViewController    = CustomSplitViewController()
+        let settingsSplitViewController = CustomSplitViewController()
+
+        episodeSplitViewController.viewControllers  = [UINavigationController.init(rootViewController: episodeVC),
+                                                       UINavigationController.init(rootViewController: episodeDetailVC)]
+        castSplitViewController.viewControllers     = [UINavigationController.init(rootViewController: castVC)]
+        houseSplitViewController.viewControllers    = [UINavigationController.init(rootViewController: houseVC),
+                                                       UINavigationController.init(rootViewController: houseDetailVC)]
+        settingsSplitViewController.viewControllers = [UINavigationController.init(rootViewController: settingsVC)]
         
 
         
         
-        episodeViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
-        castViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
-        houseViewController.tabBarItem = UITabBarItem.init(title: "Houses", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
-        settingsViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 3)
-    
-        let navigationEpisodeViewController = UINavigationController.init(rootViewController: episodeViewController)
-        
-        let navigationCastViewController = UINavigationController.init(rootViewController: castViewController)
-        
-        let navigationHouseViewController = UINavigationController.init(rootViewController: houseViewController)
-        
-        let navigationSettingsViewController = UINavigationController.init(rootViewController: settingsViewController)
-        
+        episodeSplitViewController.tabBarItem = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
+        castSplitViewController.tabBarItem = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
+        houseSplitViewController.tabBarItem = UITabBarItem.init(title: "Houses", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
+        settingsSplitViewController.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 3)
+            
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [navigationEpisodeViewController, navigationCastViewController, navigationHouseViewController, navigationSettingsViewController]
+        tabBarController.viewControllers = [episodeSplitViewController,
+        castSplitViewController,
+        houseSplitViewController,
+        settingsSplitViewController]
         tabBarController.tabBar.barStyle = .black
         tabBarController.tabBar.isTranslucent = true
         tabBarController.tabBar.tintColor = UIColor.init(red: 235/255.0, green: 172/255.0, blue: 38/255.0, alpha: 1.0)

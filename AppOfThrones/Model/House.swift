@@ -8,7 +8,7 @@
 
 import Foundation
 
-class House {
+class House: Codable {
     
     var imageName: String?
     var name: String?

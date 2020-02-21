@@ -42,9 +42,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-Tu-i0R">
-                        <rect key="frame" x="168" y="75" width="109" height="37"/>
+                        <rect key="frame" x="168" y="75" width="79" height="37"/>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="CCB-QF-0g3"/>
+                            <constraint firstAttribute="width" constant="79" id="Hcc-nU-pH5"/>
                             <constraint firstAttribute="height" constant="37" id="kDJ-DS-JwH"/>
                         </constraints>
                         <state key="normal" title="RATE">
@@ -111,6 +113,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="oyc-MO-hxU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Zx-2h-kOg"/>
+                    <constraint firstAttribute="bottom" secondItem="tI5-Tu-i0R" secondAttribute="bottom" constant="11" id="1Aa-xU-1Tj"/>
                     <constraint firstAttribute="bottom" secondItem="I0i-hr-eIh" secondAttribute="bottom" constant="13" id="3bw-2t-Kxd"/>
                     <constraint firstItem="fzl-7d-MBz" firstAttribute="leading" secondItem="X5z-Cs-hcA" secondAttribute="trailing" constant="-2" id="668-8e-hyX"/>
                     <constraint firstAttribute="bottom" secondItem="X5z-Cs-hcA" secondAttribute="bottom" constant="13" id="6r1-WC-Dj9"/>
@@ -126,11 +129,9 @@
                     <constraint firstAttribute="bottom" secondItem="3ti-ua-cQA" secondAttribute="bottom" constant="15.5" id="epn-2u-Yrd"/>
                     <constraint firstItem="18x-FM-sKA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="j4h-4r-uyg"/>
                     <constraint firstItem="X5z-Cs-hcA" firstAttribute="leading" secondItem="fav-MW-4gi" secondAttribute="trailing" constant="-3" id="jRJ-2e-WYq"/>
-                    <constraint firstAttribute="trailing" secondItem="tI5-Tu-i0R" secondAttribute="trailing" constant="178" id="jsN-A9-P8A"/>
                     <constraint firstItem="tI5-Tu-i0R" firstAttribute="leading" secondItem="oyc-MO-hxU" secondAttribute="trailing" constant="8" id="lV0-mw-KWE"/>
                     <constraint firstAttribute="bottom" secondItem="fav-MW-4gi" secondAttribute="bottom" constant="13" id="rZm-0T-jSB"/>
                     <constraint firstItem="I0i-hr-eIh" firstAttribute="leading" secondItem="dUC-K2-ahv" secondAttribute="trailing" constant="-1" id="uQb-K3-HfE"/>
-                    <constraint firstItem="tI5-Tu-i0R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="75" id="zQu-3g-YBm"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>

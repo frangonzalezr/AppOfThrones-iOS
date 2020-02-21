@@ -41,6 +41,7 @@
 		A1C1CD0C23F34BE3002BE504 /* AppOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD0B23F34BE3002BE504 /* AppOfThronesTests.swift */; };
 		A1C1CD1723F35E45002BE504 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD1623F35E45002BE504 /* RateViewController.swift */; };
 		A1C1CD1923F35E92002BE504 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CD1823F35E92002BE504 /* RateViewController.xib */; };
+		A1C3E3962400523B0093536E /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E3952400523B0093536E /* CustomSplitViewController.swift */; };
 		A1DB453423FF09F600CCD1D8 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */; };
 		A1DB453523FF09F600CCD1D8 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */; };
 		A1DB453823FF0A5B00CCD1D8 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */; };
@@ -98,6 +99,7 @@
 		A1C1CD0D23F34BE3002BE504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1CD1623F35E45002BE504 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		A1C1CD1823F35E92002BE504 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		A1C3E3952400523B0093536E /* CustomSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 		A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				A177979723F5F3F00043D3DF /* Model */,
 				A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */,
 				A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */,
+				A1C3E3952400523B0093536E /* CustomSplitViewController.swift */,
 				A1C0554423FB557800458C75 /* Assets.xcassets */,
 				A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */,
 				A1C1CD0223F34BE3002BE504 /* Info.plist */,
@@ -376,6 +379,7 @@
 				A177979323F5F0560043D3DF /* EpisodeViewController.swift in Sources */,
 				A177979923F5F41A0043D3DF /* Episode.swift in Sources */,
 				A1DB453923FF0A5B00CCD1D8 /* HouseDetailViewController.swift in Sources */,
+				A1C3E3962400523B0093536E /* CustomSplitViewController.swift in Sources */,
 				A1C0553A23FB496B00458C75 /* CastTableViewCell.swift in Sources */,
 				A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */,
 				A1C0553F23FB4B8100458C75 /* Cast.swift in Sources */,
