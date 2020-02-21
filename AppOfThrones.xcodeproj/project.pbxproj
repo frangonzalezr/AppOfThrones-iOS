@@ -34,7 +34,6 @@
 		A1C0553F23FB4B8100458C75 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0553E23FB4B8000458C75 /* Cast.swift */; };
 		A1C0554123FB515600458C75 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0554023FB515600458C75 /* DataController.swift */; };
 		A1C0554323FB550A00458C75 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0554223FB550A00458C75 /* House.swift */; };
-		A1C0554523FB557800458C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0554423FB557800458C75 /* Assets.xcassets */; };
 		A1C1CCF523F34BDF002BE504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */; };
 		A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */; };
 		A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */; };
@@ -42,6 +41,10 @@
 		A1C1CD1723F35E45002BE504 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1CD1623F35E45002BE504 /* RateViewController.swift */; };
 		A1C1CD1923F35E92002BE504 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C1CD1823F35E92002BE504 /* RateViewController.xib */; };
 		A1C3E3962400523B0093536E /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E3952400523B0093536E /* CustomSplitViewController.swift */; };
+		A1C3E3992400652C0093536E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E3982400652C0093536E /* SplashView.swift */; };
+		A1C3E39B240065390093536E /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E39A240065390093536E /* AnimationType.swift */; };
+		A1C3E39D240065440093536E /* SplashAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E39C240065440093536E /* SplashAnimation.swift */; };
+		A1C3E39F240069A80093536E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E39E240069A70093536E /* Assets.xcassets */; };
 		A1DB453423FF09F600CCD1D8 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */; };
 		A1DB453523FF09F600CCD1D8 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */; };
 		A1DB453823FF0A5B00CCD1D8 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */; };
@@ -88,7 +91,6 @@
 		A1C0553E23FB4B8000458C75 /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		A1C0554023FB515600458C75 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A1C0554223FB550A00458C75 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
-		A1C0554423FB557800458C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C1CCF123F34BDF002BE504 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,10 @@
 		A1C1CD1623F35E45002BE504 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		A1C1CD1823F35E92002BE504 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
 		A1C3E3952400523B0093536E /* CustomSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
+		A1C3E3982400652C0093536E /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		A1C3E39A240065390093536E /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		A1C3E39C240065440093536E /* SplashAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimation.swift; sourceTree = "<group>"; };
+		A1C3E39E240069A70093536E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 		A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 		A1C1CCF323F34BDF002BE504 /* AppOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A1C3E39E240069A70093536E /* Assets.xcassets */,
+				A1C3E397240065150093536E /* Animations */,
 				A1ADC65223FF30D30060B33A /* Data */,
 				A177979623F5F0920043D3DF /* Episodes */,
 				A1437ED223F601F400E8784B /* Cast */,
@@ -233,7 +241,6 @@
 				A1C1CCF423F34BDF002BE504 /* AppDelegate.swift */,
 				A1C1CCF623F34BDF002BE504 /* SceneDelegate.swift */,
 				A1C3E3952400523B0093536E /* CustomSplitViewController.swift */,
-				A1C0554423FB557800458C75 /* Assets.xcassets */,
 				A1C1CCFF23F34BE3002BE504 /* LaunchScreen.storyboard */,
 				A1C1CD0223F34BE3002BE504 /* Info.plist */,
 			);
@@ -247,6 +254,16 @@
 				A1C1CD0D23F34BE3002BE504 /* Info.plist */,
 			);
 			path = AppOfThronesTests;
+			sourceTree = "<group>";
+		};
+		A1C3E397240065150093536E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A1C3E39C240065440093536E /* SplashAnimation.swift */,
+				A1C3E39A240065390093536E /* AnimationType.swift */,
+				A1C3E3982400652C0093536E /* SplashView.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +353,7 @@
 				A1C0553D23FB49B500458C75 /* CastTableViewCell.xib in Resources */,
 				A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */,
 				A1ADC66023FF30FF0060B33A /* season_8.json in Resources */,
+				A1C3E39F240069A80093536E /* Assets.xcassets in Resources */,
 				A1ADC66123FF30FF0060B33A /* season_5.json in Resources */,
 				A1ADC66523FF30FF0060B33A /* season_7.json in Resources */,
 				A1ADC66623FF30FF0060B33A /* season_3.json in Resources */,
@@ -350,7 +368,6 @@
 				A1ADC66223FF30FF0060B33A /* season_2.json in Resources */,
 				A1C0553723FB31C900458C75 /* EpisodeTableViewCell.xib in Resources */,
 				A1ADC65D23FF30FF0060B33A /* houses.json in Resources */,
-				A1C0554523FB557800458C75 /* Assets.xcassets in Resources */,
 				A177979523F5F0820043D3DF /* EpisodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,11 +394,14 @@
 				A1DB453523FF09F600CCD1D8 /* EpisodeDetailViewController.swift in Sources */,
 				A1437ED923F602BC00E8784B /* SettingsViewController.swift in Sources */,
 				A177979323F5F0560043D3DF /* EpisodeViewController.swift in Sources */,
+				A1C3E39B240065390093536E /* AnimationType.swift in Sources */,
 				A177979923F5F41A0043D3DF /* Episode.swift in Sources */,
 				A1DB453923FF0A5B00CCD1D8 /* HouseDetailViewController.swift in Sources */,
+				A1C3E39D240065440093536E /* SplashAnimation.swift in Sources */,
 				A1C3E3962400523B0093536E /* CustomSplitViewController.swift in Sources */,
 				A1C0553A23FB496B00458C75 /* CastTableViewCell.swift in Sources */,
 				A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */,
+				A1C3E3992400652C0093536E /* SplashView.swift in Sources */,
 				A1C0553F23FB4B8100458C75 /* Cast.swift in Sources */,
 				A1437ED723F6024900E8784B /* CastViewController.swift in Sources */,
 				A1B6A31F23FC827B00B48091 /* Rating.swift in Sources */,
