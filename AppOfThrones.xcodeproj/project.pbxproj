@@ -45,6 +45,10 @@
 		A1C3E39B240065390093536E /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E39A240065390093536E /* AnimationType.swift */; };
 		A1C3E39D240065440093536E /* SplashAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E39C240065440093536E /* SplashAnimation.swift */; };
 		A1C3E39F240069A80093536E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E39E240069A70093536E /* Assets.xcassets */; };
+		A1C3E3AB240071DB0093536E /* Dragon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3A7240071DB0093536E /* Dragon.m4a */; };
+		A1C3E3AC240071DB0093536E /* Alas.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3A8240071DB0093536E /* Alas.m4a */; };
+		A1C3E3AD240071DB0093536E /* SteadyConcertBassDrums.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3A9240071DB0093536E /* SteadyConcertBassDrums.m4a */; };
+		A1C3E3AE240071DB0093536E /* IcyWinds.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3AA240071DB0093536E /* IcyWinds.m4a */; };
 		A1DB453423FF09F600CCD1D8 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */; };
 		A1DB453523FF09F600CCD1D8 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */; };
 		A1DB453823FF0A5B00CCD1D8 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */; };
@@ -106,6 +110,10 @@
 		A1C3E39A240065390093536E /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		A1C3E39C240065440093536E /* SplashAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimation.swift; sourceTree = "<group>"; };
 		A1C3E39E240069A70093536E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1C3E3A7240071DB0093536E /* Dragon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dragon.m4a; sourceTree = "<group>"; };
+		A1C3E3A8240071DB0093536E /* Alas.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alas.m4a; sourceTree = "<group>"; };
+		A1C3E3A9240071DB0093536E /* SteadyConcertBassDrums.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SteadyConcertBassDrums.m4a; sourceTree = "<group>"; };
+		A1C3E3AA240071DB0093536E /* IcyWinds.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = IcyWinds.m4a; sourceTree = "<group>"; };
 		A1DB453223FF09F500CCD1D8 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 		A1DB453323FF09F600CCD1D8 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
@@ -230,6 +238,7 @@
 		A1C1CCF323F34BDF002BE504 /* AppOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				A1C3E3A2240071B00093536E /* Sounds */,
 				A1C3E39E240069A70093536E /* Assets.xcassets */,
 				A1C3E397240065150093536E /* Animations */,
 				A1ADC65223FF30D30060B33A /* Data */,
@@ -264,6 +273,17 @@
 				A1C3E3982400652C0093536E /* SplashView.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		A1C3E3A2240071B00093536E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A1C3E3A8240071DB0093536E /* Alas.m4a */,
+				A1C3E3A7240071DB0093536E /* Dragon.m4a */,
+				A1C3E3AA240071DB0093536E /* IcyWinds.m4a */,
+				A1C3E3A9240071DB0093536E /* SteadyConcertBassDrums.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,14 +375,18 @@
 				A1ADC66023FF30FF0060B33A /* season_8.json in Resources */,
 				A1C3E39F240069A80093536E /* Assets.xcassets in Resources */,
 				A1ADC66123FF30FF0060B33A /* season_5.json in Resources */,
+				A1C3E3AE240071DB0093536E /* IcyWinds.m4a in Resources */,
+				A1C3E3AB240071DB0093536E /* Dragon.m4a in Resources */,
 				A1ADC66523FF30FF0060B33A /* season_7.json in Resources */,
 				A1ADC66623FF30FF0060B33A /* season_3.json in Resources */,
 				A1DB453423FF09F600CCD1D8 /* EpisodeDetailViewController.xib in Resources */,
 				A1437ED523F6023500E8784B /* CastViewController.xib in Resources */,
+				A1C3E3AD240071DB0093536E /* SteadyConcertBassDrums.m4a in Resources */,
 				A1ADC65E23FF30FF0060B33A /* cast.json in Resources */,
 				A1437EE023F605AB00E8784B /* HouseViewController.xib in Resources */,
 				A1ADC66423FF30FF0060B33A /* season_6.json in Resources */,
 				A1F246F323FBEBBA00F6B3AE /* HouseTableViewCell.xib in Resources */,
+				A1C3E3AC240071DB0093536E /* Alas.m4a in Resources */,
 				A1DB453823FF0A5B00CCD1D8 /* HouseDetailViewController.xib in Resources */,
 				A1ADC66323FF30FF0060B33A /* season_1.json in Resources */,
 				A1ADC66223FF30FF0060B33A /* season_2.json in Resources */,

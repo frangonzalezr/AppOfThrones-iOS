@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CustomSplitViewController: UISplitViewController,
                                   UISplitViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTwitterSplashAnimation()
+        self.loadTwitterSplashAnimation()
+        self.Sound()
         self.delegate = self
         self.preferredDisplayMode = .allVisible
+    }
+    
+    let wingsSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Alas", ofType: "m4a")!)
+    var audioPlayer = AVAudioPlayer()
+
+    func Sound() {
+        do {
+             audioPlayer = try AVAudioPlayer(contentsOf: wingsSound)
+             audioPlayer.play()
+        } catch {
+           // couldn't load file :(
+        }
     }
     
     func loadTwitterSplashAnimation() -> Void {
