@@ -2,8 +2,8 @@
 //  EpisodeDetailViewController.swift
 //  AppOfThrones
 //
-//  Created by Fran González on 20/02/2020.
-//  Copyright © 2020 Fran González. All rights reserved.
+//  Created by Fernando Torcelly Garcia on 10/02/2020.
+//  Copyright © 2020 Fernando Torcelly Garcia. All rights reserved.
 //
 
 import UIKit

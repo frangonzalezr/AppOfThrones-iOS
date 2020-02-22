@@ -20,7 +20,7 @@ class CustomSplitViewController: UISplitViewController,
         self.preferredDisplayMode = .allVisible
     }
     
-    let wingsSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Alas", ofType: "m4a")!)
+    let wingsSound = URL(fileURLWithPath: Bundle.main.path(forResource: "SteadyConcertBassDrums", ofType: "m4a")!)
     var audioPlayer = AVAudioPlayer()
 
     func Sound() {

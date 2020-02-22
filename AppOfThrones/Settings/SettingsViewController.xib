@@ -17,9 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-4D-sM8">
-                    <rect key="frame" x="150" y="433" width="114" height="30"/>
-                    <state key="normal" title="Limpiar favoritos"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-4D-sM8">
+                    <rect key="frame" x="182" y="422" width="50" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="po5-xS-jnI"/>
+                        <constraint firstAttribute="height" constant="50" id="sgo-hV-soq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" backgroundImage="paintbrush.fill" catalog="system"/>
                     <connections>
                         <action selector="cleanFavoritesAction:" destination="-1" eventType="touchUpInside" id="sd8-WJ-5oJ"/>
                     </connections>
@@ -27,11 +33,14 @@
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oiz-Wp-B82"/>
-                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="saK-bs-p8b"/>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ghy-8m-BdL"/>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Zw5-Em-9XG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="149"/>
+            <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="paintbrush.fill" catalog="system" width="64" height="62"/>
+    </resources>
 </document>
