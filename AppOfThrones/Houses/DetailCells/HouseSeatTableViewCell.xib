@@ -16,21 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBq-FP-9kS">
-                        <rect key="frame" x="68" y="12" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Seat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBq-FP-9kS">
+                        <rect key="frame" x="68" y="12" width="88.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="IKz-Y4-Jji"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77B-cs-tMR">
+                        <rect key="frame" x="16" y="6.5" width="275.5" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="JzA-Q6-dmn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="KBq-FP-9kS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="68" id="QZJ-N2-gLJ"/>
                     <constraint firstAttribute="bottom" secondItem="KBq-FP-9kS" secondAttribute="bottom" constant="11" id="Sz1-4B-Ans"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="77B-cs-tMR" secondAttribute="trailing" constant="12.5" id="XzM-10-1qF"/>
+                    <constraint firstItem="77B-cs-tMR" firstAttribute="centerY" secondItem="KBq-FP-9kS" secondAttribute="centerY" id="f1Y-8L-Rrj"/>
+                    <constraint firstItem="77B-cs-tMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yoM-l2-Dy0"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="houseSeat" destination="KBq-FP-9kS" id="vcq-KT-iSX"/>

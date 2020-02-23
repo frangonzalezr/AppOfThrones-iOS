@@ -9,9 +9,7 @@
 import UIKit
 
 class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var sigil: UILabel!
-    @IBOutlet weak var words: UILabel!
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,8 +18,6 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
     var house: House? {
         didSet {
             self.title = self.house?.name
-            sigil.text = self.house?.seat
-            words.text = self.house?.words
             self.tableView.reloadData()
         }
     }
@@ -50,6 +46,23 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.register(nib3, forCellReuseIdentifier: "HouseWordsTableViewCell")
     }
 
+    // VAMOS A CAMBIAR EL COLOR DEL FONDO DE LA CABECERA DE LA SECCION Y YA DE PASO AÑADIMOS EL TITULO
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+      let headerView = UIView(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 30))
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+      if (section == 0) {
+        label.text = NSLocalizedString("House Image", comment: "House Image")
+      } else {
+        label.text = NSLocalizedString("House Atributes", comment: "House Atributes")
+      }
+        headerView.addSubview(label)
+      return headerView
+    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionName: String
@@ -58,7 +71,6 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
                 sectionName = NSLocalizedString("House Image", comment: "House Image")
             case 1:
                 sectionName = NSLocalizedString("House Atributes", comment: "House Atributes")
-            // ...
             default:
                 sectionName = ""
         }

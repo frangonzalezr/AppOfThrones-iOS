@@ -16,21 +16,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okg-c9-leR">
-                        <rect key="frame" x="63" y="12" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okg-c9-leR">
+                        <rect key="frame" x="101" y="12" width="103" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="lTA-l7-oIW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-Eg-AI9">
+                        <rect key="frame" x="16" y="11.5" width="53.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="okg-c9-leR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="63" id="HHJ-pG-CLI"/>
+                    <constraint firstItem="okg-c9-leR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="101" id="HHJ-pG-CLI"/>
+                    <constraint firstItem="kSZ-Eg-AI9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Tnd-Ik-Uja"/>
+                    <constraint firstItem="kSZ-Eg-AI9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WVq-VF-zhM"/>
                     <constraint firstAttribute="bottom" secondItem="okg-c9-leR" secondAttribute="bottom" constant="11" id="pOb-Qx-UGB"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="houseWords" destination="okg-c9-leR" id="p13-Rh-uIM"/>
