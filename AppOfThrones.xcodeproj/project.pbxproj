@@ -14,6 +14,10 @@
 		A1437EDF23F605AB00E8784B /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1437EDD23F605AB00E8784B /* HouseViewController.swift */; };
 		A1437EE023F605AB00E8784B /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1437EDE23F605AB00E8784B /* HouseViewController.xib */; };
 		A177979923F5F41A0043D3DF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177979823F5F41A0043D3DF /* Episode.swift */; };
+		A190AB9824029E6200AEC7A4 /* HouseSeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190AB9624029E6200AEC7A4 /* HouseSeatTableViewCell.swift */; };
+		A190AB9924029E6200AEC7A4 /* HouseSeatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A190AB9724029E6200AEC7A4 /* HouseSeatTableViewCell.xib */; };
+		A190AB9C2402AA5400AEC7A4 /* HouseWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190AB9A2402AA5400AEC7A4 /* HouseWordsTableViewCell.swift */; };
+		A190AB9D2402AA5400AEC7A4 /* HouseWordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A190AB9B2402AA5400AEC7A4 /* HouseWordsTableViewCell.xib */; };
 		A1ADC65D23FF30FF0060B33A /* houses.json in Resources */ = {isa = PBXBuildFile; fileRef = A1ADC65323FF30FE0060B33A /* houses.json */; };
 		A1ADC65E23FF30FF0060B33A /* cast.json in Resources */ = {isa = PBXBuildFile; fileRef = A1ADC65423FF30FE0060B33A /* cast.json */; };
 		A1ADC65F23FF30FF0060B33A /* season_4.json in Resources */ = {isa = PBXBuildFile; fileRef = A1ADC65523FF30FE0060B33A /* season_4.json */; };
@@ -51,6 +55,8 @@
 		A1C3E3BC240150E70093536E /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3B4240150E60093536E /* EpisodeDetailViewController.xib */; };
 		A1C3E3BD240150E70093536E /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3E3B5240150E60093536E /* RateViewController.swift */; };
 		A1C3E3BE240150E70093536E /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C3E3B6240150E70093536E /* RateViewController.xib */; };
+		A1CE16992401A36000C343BF /* HouseImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE16972401A36000C343BF /* HouseImageTableViewCell.swift */; };
+		A1CE169A2401A36000C343BF /* HouseImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CE16982401A36000C343BF /* HouseImageTableViewCell.xib */; };
 		A1DB453823FF0A5B00CCD1D8 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */; };
 		A1DB453923FF0A5B00CCD1D8 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB453723FF0A5B00CCD1D8 /* HouseDetailViewController.swift */; };
 		A1EA29A524008AF7002560AF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA29A324008AF7002560AF /* FavoritesViewController.swift */; };
@@ -81,6 +87,10 @@
 		A1437EDD23F605AB00E8784B /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		A1437EDE23F605AB00E8784B /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
 		A177979823F5F41A0043D3DF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		A190AB9624029E6200AEC7A4 /* HouseSeatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseSeatTableViewCell.swift; sourceTree = "<group>"; };
+		A190AB9724029E6200AEC7A4 /* HouseSeatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseSeatTableViewCell.xib; sourceTree = "<group>"; };
+		A190AB9A2402AA5400AEC7A4 /* HouseWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWordsTableViewCell.swift; sourceTree = "<group>"; };
+		A190AB9B2402AA5400AEC7A4 /* HouseWordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseWordsTableViewCell.xib; sourceTree = "<group>"; };
 		A1ADC65323FF30FE0060B33A /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = houses.json; sourceTree = "<group>"; };
 		A1ADC65423FF30FE0060B33A /* cast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cast.json; sourceTree = "<group>"; };
 		A1ADC65523FF30FE0060B33A /* season_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = season_4.json; sourceTree = "<group>"; };
@@ -122,6 +132,8 @@
 		A1C3E3B4240150E60093536E /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 		A1C3E3B5240150E60093536E /* RateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		A1C3E3B6240150E70093536E /* RateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		A1CE16972401A36000C343BF /* HouseImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseImageTableViewCell.swift; sourceTree = "<group>"; };
+		A1CE16982401A36000C343BF /* HouseImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseImageTableViewCell.xib; sourceTree = "<group>"; };
 		A1DB453623FF0A5B00CCD1D8 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 		A1DB453723FF0A5B00CCD1D8 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		A1EA29A324008AF7002560AF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 		A1437EDC23F6058600E8784B /* Houses */ = {
 			isa = PBXGroup;
 			children = (
+				A1CE169224019DE100C343BF /* DetailCells */,
 				A1437EDD23F605AB00E8784B /* HouseViewController.swift */,
 				A1437EDE23F605AB00E8784B /* HouseViewController.xib */,
 				A1F246F223FBEBB900F6B3AE /* HouseTableViewCell.swift */,
@@ -188,6 +201,7 @@
 		A177979623F5F0920043D3DF /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
+				A1CE169124019D3600C343BF /* DetailCells */,
 				A1C3E3B1240150E50093536E /* EpisodeDetailViewController.swift */,
 				A1C3E3B4240150E60093536E /* EpisodeDetailViewController.xib */,
 				A1C3E3B2240150E60093536E /* EpisodeTableViewCell.swift */,
@@ -299,6 +313,26 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		A1CE169124019D3600C343BF /* DetailCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailCells;
+			sourceTree = "<group>";
+		};
+		A1CE169224019DE100C343BF /* DetailCells */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE16972401A36000C343BF /* HouseImageTableViewCell.swift */,
+				A1CE16982401A36000C343BF /* HouseImageTableViewCell.xib */,
+				A190AB9624029E6200AEC7A4 /* HouseSeatTableViewCell.swift */,
+				A190AB9724029E6200AEC7A4 /* HouseSeatTableViewCell.xib */,
+				A190AB9A2402AA5400AEC7A4 /* HouseWordsTableViewCell.swift */,
+				A190AB9B2402AA5400AEC7A4 /* HouseWordsTableViewCell.xib */,
+			);
+			path = DetailCells;
+			sourceTree = "<group>";
+		};
 		A1EA29A224008AAC002560AF /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,15 +429,18 @@
 			files = (
 				A1ADC65F23FF30FF0060B33A /* season_4.json in Resources */,
 				A1C3E3BE240150E70093536E /* RateViewController.xib in Resources */,
+				A190AB9D2402AA5400AEC7A4 /* HouseWordsTableViewCell.xib in Resources */,
 				A1437EDB23F602D200E8784B /* SettingsViewController.xib in Resources */,
 				A1C0553D23FB49B500458C75 /* CastTableViewCell.xib in Resources */,
 				A1EA29AE24008B63002560AF /* FavoritesTableViewCell.xib in Resources */,
 				A1C3E3BB240150E70093536E /* EpisodeTableViewCell.xib in Resources */,
+				A1CE169A2401A36000C343BF /* HouseImageTableViewCell.xib in Resources */,
 				A1C3E3B8240150E70093536E /* EpisodeViewController.xib in Resources */,
 				A1C1CD0123F34BE3002BE504 /* LaunchScreen.storyboard in Resources */,
 				A1ADC66023FF30FF0060B33A /* season_8.json in Resources */,
 				A1C3E39F240069A80093536E /* Assets.xcassets in Resources */,
 				A1ADC66123FF30FF0060B33A /* season_5.json in Resources */,
+				A190AB9924029E6200AEC7A4 /* HouseSeatTableViewCell.xib in Resources */,
 				A1C3E3AE240071DB0093536E /* IcyWinds.m4a in Resources */,
 				A1C3E3BC240150E70093536E /* EpisodeDetailViewController.xib in Resources */,
 				A1C3E3AB240071DB0093536E /* Dragon.m4a in Resources */,
@@ -449,8 +486,10 @@
 				A1C3E39B240065390093536E /* AnimationType.swift in Sources */,
 				A177979923F5F41A0043D3DF /* Episode.swift in Sources */,
 				A1DB453923FF0A5B00CCD1D8 /* HouseDetailViewController.swift in Sources */,
+				A1CE16992401A36000C343BF /* HouseImageTableViewCell.swift in Sources */,
 				A1C3E39D240065440093536E /* SplashAnimation.swift in Sources */,
 				A1EA29AD24008B63002560AF /* FavoritesTableViewCell.swift in Sources */,
+				A190AB9824029E6200AEC7A4 /* HouseSeatTableViewCell.swift in Sources */,
 				A1C3E3962400523B0093536E /* CustomSplitViewController.swift in Sources */,
 				A1C0553A23FB496B00458C75 /* CastTableViewCell.swift in Sources */,
 				A1C1CCF723F34BDF002BE504 /* SceneDelegate.swift in Sources */,
@@ -461,6 +500,7 @@
 				A1B6A31F23FC827B00B48091 /* Rating.swift in Sources */,
 				A1F246F423FBEBBA00F6B3AE /* HouseTableViewCell.swift in Sources */,
 				A1EA29A924008B36002560AF /* FavoritesDetailViewController.swift in Sources */,
+				A190AB9C2402AA5400AEC7A4 /* HouseWordsTableViewCell.swift in Sources */,
 				A1437EDF23F605AB00E8784B /* HouseViewController.swift in Sources */,
 				A1C3E3BA240150E70093536E /* EpisodeTableViewCell.swift in Sources */,
 			);
