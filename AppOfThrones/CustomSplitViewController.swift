@@ -33,12 +33,12 @@ class CustomSplitViewController: UISplitViewController,
     }
     
     func loadTwitterSplashAnimation() -> Void {
-        let splashView = SplashView(iconImage: UIImage(named: "icon_1024")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1))
+        let splashView = SplashView(iconImage: UIImage(named: "title")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1))
         
         self.view.addSubview(splashView)
         
-        splashView.duration = 2.0
-        splashView.animationType = AnimationType.twitter
+        splashView.duration = 1.0
+        splashView.animationType = AnimationType.heartBeat
         splashView.iconColor = UIColor.black
         splashView.useCustomIconColor = false
         

@@ -48,13 +48,18 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
 
     // VAMOS A CAMBIAR EL COLOR DEL FONDO DE LA CABECERA DE LA SECCION Y YA DE PASO AÑADIMOS EL TITULO
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
-      let headerView = UIView(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 30))
-        headerView.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 30))
+      let headerView = UIView(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 45))
+        headerView.backgroundColor = UIColor(patternImage: UIImage(named: "houses.png")!).withAlphaComponent(0.1)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 45))
         label.textColor = UIColor.white
         label.textAlignment = .center
+
       if (section == 0) {
         label.text = NSLocalizedString("House Image", comment: "House Image")
       } else {
