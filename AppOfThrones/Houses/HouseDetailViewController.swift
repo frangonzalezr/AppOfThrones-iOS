@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,6 +20,7 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
         didSet {
             self.title = self.house?.name
             self.tableView.reloadData()
+            self.Sound() // En iPad funciona aquí
         }
     }
     
@@ -26,11 +28,24 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.init(nibName: "HouseDetailViewController", bundle: nil)
         self.title = house.name
         self.house = house
+        self.Sound() // En iPhone funciona aquí
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.setupUI()
+        self.setupUI()
+    }
+    
+    let wingsSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Wings", ofType: "m4a")!)
+    var audioPlayer = AVAudioPlayer()
+
+    func Sound() {
+        do {
+             audioPlayer = try AVAudioPlayer(contentsOf: wingsSound)
+             audioPlayer.play()
+        } catch {
+           // couldn't load file :(
+        }
     }
     
     // MARK: - SetUp Functions
@@ -121,22 +136,20 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
         if indexPath.section == 0 {
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseImageTableViewCell", for: indexPath) as? HouseImageTableViewCell {
             
-                    cell.avatar.image = UIImage.init(named: self.house?.name ?? "")
+                    cell.avatar.image = UIImage.init(named: self.house?.name ?? "title")
                     return cell
                 }
                 fatalError("Could not create Account cells")
         } else {
             if indexPath.row == 0 {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseSeatTableViewCell", for: indexPath) as? HouseSeatTableViewCell {
-                
-                        cell.houseSeat.text = house?.seat
+                            cell.houseSeat.text = house?.seat ?? "Select a House in The List !"
                         return cell
                     }
                     fatalError("Could not create Account cells")
             } else {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseWordsTableViewCell", for: indexPath) as? HouseWordsTableViewCell {
-                
-                        cell.houseWords.text = house?.words
+                        cell.houseWords.text = house?.words ?? "Select a House in The List !"
                         return cell
                     }
                     fatalError("Could not create Account cells")

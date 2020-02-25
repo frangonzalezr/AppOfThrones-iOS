@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeDetailViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="kSI-qz-E24" id="Elm-Od-vmU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eFp-EL-CqN"/>
             </connections>
         </placeholder>
@@ -17,21 +18,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-dY-lcS">
-                    <rect key="frame" x="20" y="437.5" width="374" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="eLt-K5-ofO"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.88500124219999998" green="0.683257699" blue="0.27436178919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-qz-E24">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qLu-Tp-RoE"/>
+                        <outlet property="delegate" destination="-1" id="x9b-fX-sNk"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="bqQ-dY-lcS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="49F-VN-99u"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bqQ-dY-lcS" secondAttribute="trailing" constant="20" id="X20-aD-2ri"/>
-                <constraint firstItem="bqQ-dY-lcS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="d77-s8-dDP"/>
+                <constraint firstItem="kSI-qz-E24" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Fj3-ef-O6p"/>
+                <constraint firstItem="kSI-qz-E24" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JSK-3l-rm2"/>
+                <constraint firstItem="kSI-qz-E24" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nyW-4X-DMW"/>
+                <constraint firstItem="kSI-qz-E24" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xp3-h1-Rb5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>

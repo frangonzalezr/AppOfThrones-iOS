@@ -87,7 +87,20 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let episode = episodes[indexPath.row]
+        
+        if let splitViewController = self.splitViewController,
+            splitViewController.viewControllers.count > 1 {
+            if let navigationController = splitViewController.viewControllers[1] as? UINavigationController,
+                let detailViewController = navigationController.visibleViewController as? EpisodeDetailViewController {
+                detailViewController.episode = episode
+            }
+        } else {
+            let episodeDetailVC = EpisodeDetailViewController.init(episode: episode)
+            self.navigationController?.pushViewController(episodeDetailVC, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     // MARK: - UITableViewDatasource
