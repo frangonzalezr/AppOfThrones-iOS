@@ -14,7 +14,7 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     var cast: [Cast] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +84,22 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let castIn = cast[indexPath.row]
+        
+        if let splitViewController = self.splitViewController,
+            splitViewController.viewControllers.count > 1 {
+            if let navigationController = splitViewController.viewControllers[1] as? UINavigationController,
+                let detailViewController = navigationController.visibleViewController as? CastDetailViewController {
+                detailViewController.cast = castIn
+            }
+        } else {
+            let castDetailVC = CastDetailViewController.init(cast: castIn)
+            self.navigationController?.pushViewController(castDetailVC, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+
     }
     
     // MARK: - UITableViewDatasource
