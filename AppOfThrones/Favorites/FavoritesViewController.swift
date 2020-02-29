@@ -15,7 +15,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var table: UITableView!
     
-    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter Is Coming", date: "April 17, 2011", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.")]
+    var episodes: [Episode] = []
     
     var favoriteEpisodes: [Episode] = []
     
@@ -44,7 +44,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func setupUI() {
         self.title = "Favorite Episodes"
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.1)
         let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
     }
@@ -94,6 +94,23 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         fatalError("Could not create Account cells")
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let episode = favoriteEpisodes[indexPath.row]
+        
+        if let splitViewController = self.splitViewController,
+            splitViewController.viewControllers.count > 1 {
+            if let navigationController = splitViewController.viewControllers[1] as? UINavigationController,
+                let detailViewController = navigationController.visibleViewController as? EpisodeDetailViewController {
+                detailViewController.episode = episode
+            }
+        } else {
+            let episodeDetailVC = EpisodeDetailViewController.init(episode: episode)
+            self.navigationController?.pushViewController(episodeDetailVC, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
     // MARK: - UITableViewDatasource
 
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -12,26 +12,25 @@ import AVFoundation
 class CustomSplitViewController: UISplitViewController,
                                   UISplitViewControllerDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadTwitterSplashAnimation()
-        self.Sound()
+    
         self.delegate = self
         self.preferredDisplayMode = .allVisible
     }
     
-    let concertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "SteadyConcertBassDrums", ofType: "m4a")!)
-    var audioPlayer = AVAudioPlayer()
-
-    func Sound() {
-        do {
-             audioPlayer = try AVAudioPlayer(contentsOf: concertSound)
-             audioPlayer.play()
-        } catch {
-           // couldn't load file :(
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if DataController.shared.animationPlayed {
+            print("Ya hemos ejecutado la animación")
+        } else {
+            self.loadTwitterSplashAnimation()
+            DataController.shared.animationPlayed = true
         }
+        
     }
-    
+
     func loadTwitterSplashAnimation() -> Void {
         let splashView = SplashView(iconImage: UIImage(named: "title")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1))
         

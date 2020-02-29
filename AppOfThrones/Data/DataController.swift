@@ -14,11 +14,14 @@ protocol Identifiable {
 
 class DataController {
     
+    
     static var shared = DataController()
     private init() {
     }
     
     //var id: Int = 0
+    
+    var animationPlayed: Bool = false
     
     private var rating: [Rating] = []
     private var favorite: [Int] = []

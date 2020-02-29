@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Mis estados
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        self.Sound()
         return true
     }
 
+    let concertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "SteadyConcertBassDrums", ofType: "m4a")!)
+    var audioPlayer = AVAudioPlayer()
+    
+    func Sound() {
+        do {
+             audioPlayer = try AVAudioPlayer(contentsOf: concertSound)
+             audioPlayer.play()
+        } catch {
+           // couldn't load file :(
+        }
+    }
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         print("Entro en Background")
     }

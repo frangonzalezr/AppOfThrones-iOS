@@ -51,7 +51,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         seasonSegmented.selectedSegmentTintColor = UIColor.black.withAlphaComponent(0.75)
         seasonSegmented.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         seasonSegmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.75)], for: .normal)
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.1)
         let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
     }

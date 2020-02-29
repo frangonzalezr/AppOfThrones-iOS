@@ -43,5 +43,6 @@ class SettingsViewController: UIViewController {
     
     func setupUI() {
         self.title = "Settings"
+        self.navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.1)
     }
 }

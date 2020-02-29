@@ -22,10 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let episodeVC  = EpisodeViewController.init(nibName:  "EpisodeViewController", bundle: nil)
         let episodeDetailVC = EpisodeDetailViewController.init(nibName: "EpisodeDetailViewController", bundle: nil)
         let castVC     = CastViewController.init(nibName: "CastViewController", bundle: nil)
+        let castDetailVC     = CastDetailViewController.init(nibName: "CastDetailViewController", bundle: nil)
         let houseVC    = HouseViewController.init(nibName: "HouseViewController", bundle: nil)
         let houseDetailVC = HouseDetailViewController.init(nibName: "HouseDetailViewController", bundle: nil)
         let favoritesVC    = FavoritesViewController.init(nibName: "FavoritesViewController", bundle: nil)
-        let favoritesDetailVC = FavoritesDetailViewController.init(nibName: "FavoritesDetailViewController", bundle: nil)
+        let favoritesDetailVC = EpisodeDetailViewController.init(nibName: "EpisodeDetailViewController", bundle: nil)
         let settingsVC = SettingsViewController.init(nibName: "SettingsViewController", bundle: nil)
 
         // Setup tabbar
@@ -37,7 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         episodeSplitViewController.viewControllers  = [UINavigationController.init(rootViewController: episodeVC),
                                                        UINavigationController.init(rootViewController: episodeDetailVC)]
-        castSplitViewController.viewControllers     = [UINavigationController.init(rootViewController: castVC)]
+        castSplitViewController.viewControllers     = [UINavigationController.init(rootViewController: castVC),
+                                                       UINavigationController.init(rootViewController: castDetailVC)]
         houseSplitViewController.viewControllers    = [UINavigationController.init(rootViewController: houseVC),
                                                        UINavigationController.init(rootViewController: houseDetailVC)]
         favoritesSplitViewController.viewControllers    = [UINavigationController.init(rootViewController: favoritesVC),

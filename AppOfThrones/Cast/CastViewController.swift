@@ -56,6 +56,7 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func setupUI() {
         self.title = "Cast"
+        self.navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.1)
         let nib = UINib.init(nibName: "CastTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
         self.tableView.delegate = self

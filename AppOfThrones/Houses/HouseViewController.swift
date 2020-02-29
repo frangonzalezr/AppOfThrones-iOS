@@ -47,7 +47,7 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func setupUI() {
         self.title = "Houses"
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.1)
         let nib = UINib.init(nibName: "HouseTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "HouseTableViewCell")
     }
