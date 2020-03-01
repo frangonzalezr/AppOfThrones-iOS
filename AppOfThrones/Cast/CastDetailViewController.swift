@@ -152,7 +152,7 @@ class CastDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                     fatalError("Could not create Account cells")
             } else {
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "SecondaryAttributesTableViewCell", for: indexPath) as? SecondaryAttributesTableViewCell {
-                        cell.secondaryAttribute.text = "As \(cast?.role ?? "") on episode \(cast?.episodes ?? 0)"
+                        cell.secondaryAttribute.text = "As \(cast?.role ?? "") on \(cast?.episodes ?? 0) episodes"
                         return cell
                     }
                     fatalError("Could not create Account cells")

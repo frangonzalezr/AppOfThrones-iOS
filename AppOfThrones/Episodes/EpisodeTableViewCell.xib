@@ -38,10 +38,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYn-e0-yhV">
-                        <rect key="frame" x="180" y="81" width="26" height="21"/>
+                        <rect key="frame" x="168" y="81" width="38" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="91f-W9-WFX"/>
-                            <constraint firstAttribute="width" constant="26" id="qmI-13-Xsl"/>
+                            <constraint firstAttribute="width" constant="38" id="qmI-13-Xsl"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +137,7 @@
                     <constraint firstItem="Lvo-oT-hVL" firstAttribute="leading" secondItem="nJN-yE-vnS" secondAttribute="trailing" constant="20" id="cH8-hv-Smt"/>
                     <constraint firstItem="hoW-y5-3nF" firstAttribute="leading" secondItem="nJN-yE-vnS" secondAttribute="trailing" constant="20" id="dhB-BR-PD0"/>
                     <constraint firstItem="4vZ-Df-LiL" firstAttribute="leading" secondItem="Vex-Th-sds" secondAttribute="trailing" constant="2" id="e9G-JO-qii"/>
-                    <constraint firstItem="IYn-e0-yhV" firstAttribute="leading" secondItem="nJN-yE-vnS" secondAttribute="trailing" constant="20" id="eYJ-N4-jcp"/>
+                    <constraint firstItem="IYn-e0-yhV" firstAttribute="leading" secondItem="nJN-yE-vnS" secondAttribute="trailing" constant="8" id="eYJ-N4-jcp"/>
                     <constraint firstItem="YXy-6f-GIo" firstAttribute="leading" secondItem="IYn-e0-yhV" secondAttribute="trailing" constant="4" id="fcE-y2-ltA"/>
                     <constraint firstItem="nJN-yE-vnS" firstAttribute="leading" secondItem="S0F-up-CwY" secondAttribute="leading" constant="20" id="iUE-Jh-Yt6"/>
                     <constraint firstAttribute="bottom" secondItem="8Cl-p1-PFV" secondAttribute="bottom" id="ikB-L7-8Jy"/>
