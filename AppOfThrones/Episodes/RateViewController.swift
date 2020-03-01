@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol RateViewControllerDelegate {
-    func didRateChanged()
-}
-
 class RateViewController: UIViewController {
     
 
@@ -27,7 +23,7 @@ class RateViewController: UIViewController {
     @IBOutlet weak var star05: UIImageView!
     
     private var episode: Episode?
-    var delegate: RateViewControllerDelegate?
+
     
     convenience init(withEpisode episode: Episode) {
         self.init(nibName: "RateViewController", bundle: nil)
@@ -61,7 +57,10 @@ class RateViewController: UIViewController {
         if let episode = episode {
             DataController.shared.rateEpisode(episode, value: rate)
         }
-        self.delegate?.didRateChanged()
+        // ACTUALIZAR TODAS LAS TABLAS DONDE APAREZCA RATES
+        
+        let noteName = Notification.Name(rawValue: "DidRatesUpdated")
+        NotificationCenter.default.post(name: noteName, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     

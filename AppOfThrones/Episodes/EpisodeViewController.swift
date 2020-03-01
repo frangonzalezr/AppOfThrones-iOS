@@ -10,6 +10,7 @@ import UIKit
 
 class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EpisodeTableViewCellDelegate {
     
+    
     @IBOutlet weak var seasonSegmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
     
@@ -20,7 +21,13 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupNotifications()
         self.setupData(season: 1)
+    }
+    
+    deinit {
+        let noteName = Notification.Name(rawValue: "DidRatesUpdated")
+        NotificationCenter.default.removeObserver(self, name: noteName, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +51,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     // MARK: - Setup
+    
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidRatesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRateChanged), name: noteName, object: nil)
+    }
     
     func setupUI() {
         self.title = "Seasons"
@@ -135,6 +147,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - EpisodeTableViewCellDelegate
     
     func didFavoriteChanged() {
+        table.reloadData()
+    }
+    
+    // MARK: - RateViewControllerDelegate
+    
+    @objc func didRateChanged() {
         table.reloadData()
     }
 }

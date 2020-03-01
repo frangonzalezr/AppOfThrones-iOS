@@ -23,6 +23,11 @@ class SettingsViewController: UIViewController {
     
     @IBAction func cleanRatingAction(_ sender: Any) {
         DataController.shared.cleanRating()
+        
+        // ACTUALIZAR TODAS LAS TABLAS DONDE APAREZCA RATES
+        
+        let noteName = Notification.Name(rawValue: "DidRatesUpdated")
+        NotificationCenter.default.post(name: noteName, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
