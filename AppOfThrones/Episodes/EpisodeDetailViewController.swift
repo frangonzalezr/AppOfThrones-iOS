@@ -53,12 +53,12 @@ class EpisodeDetailViewController: UIViewController, UITableViewDelegate, UITabl
     func setupUI() {
         self.title = "Episode Details"
         
-        let nib1 = UINib.init(nibName: "EpisodeImageTableViewCell", bundle: nil)
-        self.tableView.register(nib1, forCellReuseIdentifier: "EpisodeImageTableViewCell")
-        let nib2 = UINib.init(nibName: "EpisodeDateSeasonTableViewCell", bundle: nil)
-        self.tableView.register(nib2, forCellReuseIdentifier: "EpisodeDateSeasonTableViewCell")
-        let nib3 = UINib.init(nibName: "EpisodeOverviewTableViewCell", bundle: nil)
-        self.tableView.register(nib3, forCellReuseIdentifier: "EpisodeOverviewTableViewCell")
+        let nib1 = UINib.init(nibName: "ImageTableViewCell", bundle: nil)
+        self.tableView.register(nib1, forCellReuseIdentifier: "ImageTableViewCell")
+        let nib2 = UINib.init(nibName: "MainAttributesTableViewCell", bundle: nil)
+        self.tableView.register(nib2, forCellReuseIdentifier: "MainAttributesTableViewCell")
+        let nib3 = UINib.init(nibName: "SecondaryAttributesTableViewCell", bundle: nil)
+        self.tableView.register(nib3, forCellReuseIdentifier: "SecondaryAttributesTableViewCell")
     }
 
     // VAMOS A CAMBIAR EL COLOR DEL FONDO DE LA CABECERA DE LA SECCION Y YA DE PASO AÑADIMOS EL TITULO
@@ -134,27 +134,26 @@ class EpisodeDetailViewController: UIViewController, UITableViewDelegate, UITabl
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
         if indexPath.section == 0 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeImageTableViewCell", for: indexPath) as? EpisodeImageTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell {
             
-                    cell.episodeImage.image = UIImage.init(named: self.episode?.image ?? "title")
+                    cell.cellImage.image = UIImage.init(named: self.episode?.image ?? "title")
                     return cell
                 }
                 fatalError("Could not create Account cells")
         } else {
             if indexPath.row == 0 {
-                    if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeDateSeasonTableViewCell", for: indexPath) as? EpisodeDateSeasonTableViewCell {
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "MainAttributesTableViewCell", for: indexPath) as? MainAttributesTableViewCell {
                             
                         if let date = episode?.date {
                             let season = episode?.season
-                            cell.seasonDate.text = "Episode from season \(season ?? 0) watched on \(date )"
+                            cell.mainAttribute.text = "Episode from season \(season ?? 0) watched on \(date )"
                         }
                         return cell
                     }
                     fatalError("Could not create Account cells")
             } else {
-                    if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeOverviewTableViewCell", for: indexPath) as? EpisodeOverviewTableViewCell {
-                        cell.name.text = episode?.name
-                        cell.overview.text = episode?.overview ?? "Select Episode in The List !"
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "SecondaryAttributesTableViewCell", for: indexPath) as? SecondaryAttributesTableViewCell {
+                        cell.secondaryAttribute.text = "\"\(episode?.name ?? "")\" is about \(episode?.overview ?? "Select Episode in The List !")"
                         return cell
                     }
                     fatalError("Could not create Account cells")

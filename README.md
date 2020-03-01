@@ -20,4 +20,4 @@ Se aplica cada una de las primeras veces que se instancia el splitViewController
 b) Un efecto de sonido en cada uno de los efectos anteriores y otros efectos en los detalles.
 Estos los he grabado yo para que no haya problemas de licencia, así han quedado...
 
-TODO: Voy a intentar que me dé tiempo antes de finalizar el día (que estoy griposo) a refactorizar, sobre todo las vistas detalle en tabla que realmente son comunes a los 3 modelos. 
+TODO: Me ha quedado (entre otras cosas de maquillaje) refactorizar <Episode|Cast|House>DetailViewController

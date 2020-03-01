@@ -53,12 +53,12 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
     func setupUI() {
         self.title = "House Details"
         
-        let nib1 = UINib.init(nibName: "HouseImageTableViewCell", bundle: nil)
-        self.tableView.register(nib1, forCellReuseIdentifier: "HouseImageTableViewCell")
-        let nib2 = UINib.init(nibName: "HouseSeatTableViewCell", bundle: nil)
-        self.tableView.register(nib2, forCellReuseIdentifier: "HouseSeatTableViewCell")
-        let nib3 = UINib.init(nibName: "HouseWordsTableViewCell", bundle: nil)
-        self.tableView.register(nib3, forCellReuseIdentifier: "HouseWordsTableViewCell")
+        let nib1 = UINib.init(nibName: "ImageTableViewCell", bundle: nil)
+        self.tableView.register(nib1, forCellReuseIdentifier: "ImageTableViewCell")
+        let nib2 = UINib.init(nibName: "MainAttributesTableViewCell", bundle: nil)
+        self.tableView.register(nib2, forCellReuseIdentifier: "MainAttributesTableViewCell")
+        let nib3 = UINib.init(nibName: "SecondaryAttributesTableViewCell", bundle: nil)
+        self.tableView.register(nib3, forCellReuseIdentifier: "SecondaryAttributesTableViewCell")
     }
 
     // VAMOS A CAMBIAR EL COLOR DEL FONDO DE LA CABECERA DE LA SECCION Y YA DE PASO AÑADIMOS EL TITULO
@@ -134,22 +134,23 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
         if indexPath.section == 0 {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseImageTableViewCell", for: indexPath) as? HouseImageTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell {
             
-                    cell.avatar.image = UIImage.init(named: self.house?.name ?? "title")
+                    cell.cellImage.image = UIImage.init(named: self.house?.name ?? "title")
                     return cell
                 }
                 fatalError("Could not create Account cells")
         } else {
             if indexPath.row == 0 {
-                    if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseSeatTableViewCell", for: indexPath) as? HouseSeatTableViewCell {
-                            cell.houseSeat.text = house?.seat ?? "Select a House in The List !"
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "MainAttributesTableViewCell", for: indexPath) as? MainAttributesTableViewCell {
+                        cell.mainAttribute.text = "Seat of this House: \(house?.seat ?? "Select a House in The List !")"
                         return cell
                     }
                     fatalError("Could not create Account cells")
             } else {
-                    if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseWordsTableViewCell", for: indexPath) as? HouseWordsTableViewCell {
-                        cell.houseWords.text = house?.words ?? "Select a House in The List !"
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "SecondaryAttributesTableViewCell", for: indexPath) as? SecondaryAttributesTableViewCell {
+                        cell.secondaryAttribute.text = "Words of this House: \(house?.words ?? "Select a House in The List !")"
+                        cell.secondaryAttribute.textAlignment = .center
                         return cell
                     }
                     fatalError("Could not create Account cells")
