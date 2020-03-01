@@ -8,17 +8,21 @@
 
 import Foundation
 
-class House: Codable {
-    
+class House: Codable, Equatable, CustomStringConvertible {
+
     var imageName: String?
     var name: String?
     var words: String?
     var seat: String?
+    var description: String {
+        return "\(imageName ?? ""), \(name ?? ""), \(words ?? ""), \(seat ?? "")"
+    }
     
-    init(imageName: String?, name: String?, words: String?, seat: String?) {
-        self.imageName = imageName
-        self.name  = name
-        self.words = words
-        self.seat  = seat
+    static func == (lhs: House, rhs: House) -> Bool {
+        return
+            lhs.imageName == rhs.imageName &&
+            lhs.name == rhs.name &&
+            lhs.words == rhs.words &&
+            lhs.seat == rhs.seat
     }
 }

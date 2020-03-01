@@ -13,7 +13,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var seasonSegmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
     
-    var episodes: [Episode] = [Episode.init(id: 1, name: "Winter Is Coming", date: "April 17, 2011", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.")]
+    var episodes: [Episode] = []
     
     // MARK: - Lifecycle
     

@@ -8,8 +8,12 @@
 
 import Foundation
 
-class Episode:Identifiable, Codable {
-
+class Episode:Identifiable, Codable, Equatable, CustomStringConvertible {
+    var description: String {
+        return "\(id), \(name ?? ""), \(date ?? ""), \(image ?? ""), \(episode), \(season), \(overview)"
+    }
+    
+        
     var id: Int
     var name: String?
     var date: String?
@@ -18,13 +22,20 @@ class Episode:Identifiable, Codable {
     var season: Int
     var overview: String
     
-    init(id:Int, name: String?, date: String?, image: String?, episode: Int, season: Int, overview:String) {
-        self.id = id
-        self.name = name
-        self.date = date
-        self.image = image
-        self.episode = episode
-        self.season = season
-        self.overview = overview
+    
+    static func == (lhs: Episode, rhs: Episode) -> Bool {
+            return
+                lhs.id == rhs.id &&
+                lhs.name == rhs.name &&
+                lhs.date == rhs.date &&
+                lhs.image == rhs.image &&
+                lhs.episode == rhs.episode &&
+                lhs.season == rhs.season &&
+                lhs.overview == rhs.overview
+        }
     }
-}
+    
+
+    
+
+

@@ -1,9 +1,9 @@
 # AppOfThrones-iOS
 Práctica de App Of Thrones versión iOS para Fundamentos de iOS
 
-1.-
+1.- He creado una tabla detalle decorada con secciones. Lo ideal es refactorizar este código para utilizarlo en el resto de las clases.
 
-2.-
+2.- Lo mismo que en el punto 1, pero todavía sin refactorizar ni aplicar la refactorización.
 
 3.-
 
