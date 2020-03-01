@@ -30,11 +30,41 @@
                         <action selector="cleanFavoritesAction:" destination="-1" eventType="touchUpInside" id="sd8-WJ-5oJ"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-3D-9uF">
+                    <rect key="frame" x="148.5" y="481" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-aS-qGf">
+                    <rect key="frame" x="182" y="526" width="50" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="DdB-Ef-MCy"/>
+                        <constraint firstAttribute="height" constant="50" id="RTl-G7-HhV"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" backgroundImage="paintbrush.fill" catalog="system"/>
+                    <connections>
+                        <action selector="cleanRatingAction:" destination="-1" eventType="touchUpInside" id="eyj-YT-nCE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqe-mg-PTy">
+                    <rect key="frame" x="158.5" y="585" width="97" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ghy-8m-BdL"/>
-                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Zw5-Em-9XG"/>
+                <constraint firstItem="Hqe-mg-PTy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HK6-N2-fMC"/>
+                <constraint firstItem="Hqe-mg-PTy" firstAttribute="top" secondItem="BP6-aS-qGf" secondAttribute="bottom" constant="8" id="OoF-7L-D5d"/>
+                <constraint firstItem="vCo-3D-9uF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qrc-xo-SEN"/>
+                <constraint firstItem="vCo-3D-9uF" firstAttribute="top" secondItem="Sqb-4D-sM8" secondAttribute="bottom" constant="8" id="cLg-1W-bPT"/>
+                <constraint firstItem="BP6-aS-qGf" firstAttribute="top" secondItem="vCo-3D-9uF" secondAttribute="bottom" constant="25" id="d5h-mW-AjT"/>
+                <constraint firstItem="BP6-aS-qGf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jDV-cA-SIN"/>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qVe-dE-Grn"/>
+                <constraint firstItem="Sqb-4D-sM8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xpZ-Ud-zEc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>

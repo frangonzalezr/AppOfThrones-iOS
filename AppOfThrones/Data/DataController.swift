@@ -48,25 +48,11 @@ class DataController {
         }
     }
     
-    /*
-    
-    func isFavoriteCast(_ cast:Cast) -> Bool {
-        return favorite.contains(cast.id)
-    }
-
-    func addFavoriteCast(_ cast:Cast) {
-        if self.isFavoriteCast(cast) == false {
-            favorite.append(cast.id)
-        }
-    }
-    func removeFavoriteCast(_ cast:Cast) {
-        if let index = favorite.firstIndex(of: cast.id){
-            favorite.remove(at: index)
-        }
-    }
-    */
-    
     // MARK: - Rating
+    
+    func cleanRating() {
+        rating.removeAll()
+    }
     
     func rateEpisode(_ episode: Episode, value: Double) {
         if self.ratingForEpisode(episode) == nil {

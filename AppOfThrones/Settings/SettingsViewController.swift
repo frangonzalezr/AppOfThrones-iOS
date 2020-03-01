@@ -20,6 +20,11 @@ class SettingsViewController: UIViewController {
         NotificationCenter.default.post(name: noteName, object: nil)
     }
     
+    
+    @IBAction func cleanRatingAction(_ sender: Any) {
+        DataController.shared.cleanRating()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

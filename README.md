@@ -5,9 +5,9 @@ Práctica de App Of Thrones versión iOS para Fundamentos de iOS
 
 2.- Lo mismo que en el punto 1, pero todavía sin refactorizar ni aplicar la refactorización.
 
-3.-
+3.- He añadido una acción para vaciar el array de rating de los episodios; se refresca desde el tableview sin necesidad de notificación.
 
-4.-
+4.- He cambiado las cuatro clases modelo (Episode, Cast, House y Rating) para que conformen los protocolos Equatable y CustomStringConvertible
 
 5.- He creado sobre el tabBarController una opción adicional con un icono de corazón relleno para acceder a los Favoritos marcados.
 
